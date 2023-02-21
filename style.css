@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+/** General **/
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #313131;
+}
+ 
+p {
+  margin-top: 12px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 25px;
+    background-color:transparent;
+    text-align: center;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.389);
+    position: relative;
+    
+}
+
+  .icon img {
+    width: 250px;
+    opacity: 0.5;  
+}
+button {
+ display: inline-block;
+ outline: none;
+ cursor: pointer;
+ font-size: 15px;
+ line-height: 1;
+ border-radius: 500px;
+ transition-property: background-color,border-color,color,box-shadow,filter;
+ transition-duration: .3s;
+ border: 1px solid transparent;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ font-weight: 700;
+ text-align: center;
+ padding: 14px 14px 14px;
+ color: #616467;
+ box-shadow: inset 0 0 0 2px #616467;
+ background-color: transparent;
+ height: 68px 68px;
+ 
+ 
+}
+ button:hover{
+  color: #fff;
+  background-color: #616467;
+  }
+.centralizar {
+    position:absolute; 
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#frase-gerada{
+  color: white;
+  font-size: 16px;
+  height: 10px;
+}
+
+/** Content **/
+.content {
+    height: 215px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/** Active **/
+.card.active .content {
+    height: auto;
+}
+
+.card.active .content::before {
+    visibility: hidden;
+}
